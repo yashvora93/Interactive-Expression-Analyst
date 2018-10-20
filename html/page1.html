@@ -1,0 +1,130 @@
+<DOCTYPE HTML>
+    <html>
+        <head>
+            <title>IEA</title>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.js"></script>
+            <script src="../js/page1.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+            <link rel="stylesheet" type="text/css" href="../css/page1.css"/>
+        </head>
+        <body>
+            <br/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3"></div>
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <h1>Interactive Expression Analyst</h1>
+                    </div>
+                    <div class="col-lg-3 col-md-3"></div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <label for="videoURl"><h4>Video Type</h4></label>
+                    </div>
+                   <div class="col-lg-6">
+                        <select class="form form-control" name="videoURL" id="videoSelect" placeholder="Pick video to analyze">
+                            <option value="nervous" data-id="2_" data-fast="aecb6bb7a4">Sad</option>
+                            <option value="motivational" data-id="1_" data-fast="42f20d85ea">Motivation</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2" style="display: none;">
+                        <label for="videoURl"><h4>Load Faster</h4></label>
+                    </div>
+                    <div class="col-lg-2" style="display: none;">
+                        <input type="checkbox" class="form form-control" name="loadFast" id="loadFast" checked>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-lg-2 col-md-2">
+                        <h4>Select Type</h4>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                          <label class="btn btn-primary active">
+                            <input type="radio" name="speechType" class="opt" id="option1" value="Interview" checked> Interview Mode
+                          </label>
+                          <label class="btn btn-primary">
+                            <input type="radio" name="speechType" class="opt" id="option2" value="Funeral Speech"> Funeral Speech
+                          </label>
+                          <label class="btn btn-primary">
+                            <input type="radio" name="speechType" class="opt" id="option3" value="Informative Speech"> Informative Speech
+                          </label>
+                          <label class="btn btn-primary">
+                            <input type="radio" name="speechType" class="opt" id="option3" value="Persuasive Speech"> Persuasive Speech
+                          </label>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-lg-2 col-md-2">
+                        <input type="button" class="btn btn-success" id="uploadFeed" value="Analyze"/>
+                    </div>
+                </div>
+                <br/>
+                <div class="row" id="result">   
+                    <div class="col-lg-3 col-md-3 floatLeft backgroundWhite">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 text-center">
+                                Video
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div id="videoContainer" class="col-lg-12 col-md-12">
+                                <video controls autoplay src="" id="videoDiv"></video>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <div class="row">
+                            <div id="dataContainer" class="col-lg-9 col-md-9">
+                                    <label for="smile_factor">Smile Percentage</label>
+                            </div>
+                            <div id="dataContainer" class="col-lg-3 col-md-3">
+                                    <label for="smile_factor" id="smile_value"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 floatLeft">
+                        <div class="row">
+                            <div id = "expressionAnalysis" class="col-lg-12 col-md-12">
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div id="videoStats" class="col-lg-12 col-md-12">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 floatLeft">
+                        <div class="row">
+                            <div id="toneAnalysis" class="col-lg-12 col-md-12">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="audioStats" class="col-lg-12 col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 floatLeft backgroundWhite">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 text-center">
+                                Recommendation
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="recommendation" class="col-lg-12 col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>
+</DOCTYPE>
