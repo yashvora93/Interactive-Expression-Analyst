@@ -25,7 +25,7 @@ namespace HackathonService.Controllers
         {
             var apiUrl = "https://videobreakdown.azure-api.net/Breakdowns/Api/Partner/Breakdowns";
             var client = new HttpClient();
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "6dbacb784f154ba396ba3f3a847ecaa1");
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "API_KEY");
 
             var content = new MultipartFormDataContent();
 
@@ -96,7 +96,7 @@ namespace HackathonService.Controllers
         {
             var apiUrl = "https://videobreakdown.azure-api.net/Breakdowns/Api/Partner/Breakdowns";
             var client = new HttpClient();
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "6dbacb784f154ba396ba3f3a847ecaa1");
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "API_KEY");
 
             var result = client.GetAsync(string.Format(apiUrl + "/{0}", token)).Result;
             var json = result.Content.ReadAsStringAsync().Result;
